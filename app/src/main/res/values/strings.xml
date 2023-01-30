@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Super Market</string>
+    <string name="title">Super!Market</string>
+    <string name="market_label_name">Super Market Name:</string>
+    <string name="address">Address:</string>
+    <string name="enter_street_address">Enter Street Address</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="zipcode">Zipcode</string>
+    <string name="liquor">Liquor Department</string>
+    <string name="produce">Produce Department</string>
+    <string name="meat">Meat Department</string>
+    <string name="cheese">Cheese Department</string>
+    <string name="checkout">Ease of Checkout</string>
+    <string name="overall">Overall Rating</string>
+    <string name="error">ERROR ratings did not save</string>
+    <string name="saved">Super!Market Ratings Saved!</string>
+
+
+
+</resources>

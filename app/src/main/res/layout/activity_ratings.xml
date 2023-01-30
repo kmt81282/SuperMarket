@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RatingsActivity">
+
+    <TextView
+        android:id="@+id/textTitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/title"
+        android:textColor="#E91E63"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textTitle2" />
+
+    <TextView
+        android:id="@+id/textLiquor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/liquor"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toBottomOf="@id/textName"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RatingBar
+        android:id="@+id/ratingBarLiquor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textLiquor"
+        tools:ignore="SpeakableTextPresentCheck" />
+    <TextView
+        android:id="@+id/textProduce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/produce"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toBottomOf="@id/ratingBarLiquor"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RatingBar
+        android:id="@+id/ratingBarProduce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textProduce"
+        tools:ignore="SpeakableTextPresentCheck" />
+    <TextView
+        android:id="@+id/textMeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/meat"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toBottomOf="@id/ratingBarProduce"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RatingBar
+        android:id="@+id/ratingBarMeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textMeat"
+        tools:ignore="SpeakableTextPresentCheck" />
+    <TextView
+        android:id="@+id/textCheese"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cheese"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toBottomOf="@id/ratingBarMeat"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RatingBar
+        android:id="@+id/ratingBarCheese"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textCheese"
+        tools:ignore="SpeakableTextPresentCheck" />
+    <TextView
+        android:id="@+id/textCheckout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/checkout"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toBottomOf="@id/ratingBarCheese"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RatingBar
+        android:id="@+id/ratingBarCheckout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textCheckout"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <LinearLayout
+        android:id="@+id/navBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="@color/navbar_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/buttonList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="25dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/list"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/buttonSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginEnd="50dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/save" />
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

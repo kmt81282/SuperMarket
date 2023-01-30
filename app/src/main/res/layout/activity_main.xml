@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="184dp"
+        android:text="@string/title"
+        android:textColor="#E91E63"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textSuperMarketName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/market_label_name"
+        android:ems="10"
+        app:layout_constraintTop_toBottomOf="@+id/textTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="14"
+        android:inputType="textPersonName"
+        android:hint="Name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textSuperMarketName"/>
+    <TextView
+        android:id="@+id/textAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/address"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editName" />
+
+    <EditText
+        android:id="@+id/editAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="16"
+        android:inputType="textPersonName"
+        android:hint="@string/enter_street_address"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textAddress"
+        android:imeOptions="actionNext"/>
+
+    <EditText
+        android:id="@+id/editCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editAddress"
+        android:ems="9"
+        android:hint="@string/city"
+        android:imeOptions="actionNext"
+        android:nextFocusDown="@+id/editState"
+        android:inputType="textCapWords" />
+
+    <EditText
+        android:id="@+id/editState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/editCity"
+        app:layout_constraintTop_toBottomOf="@id/editAddress"
+        android:ems="2"
+        android:hint="@string/state"
+        android:maxLength="2"
+        android:imeOptions="actionNext"
+        android:nextFocusDown="@+id/editZipcode"
+        android:inputType="textCapCharacters" />
+
+    <EditText
+        android:id="@+id/editZipcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/editState"
+        app:layout_constraintTop_toBottomOf="@id/editAddress"
+        android:ems="5"
+        android:hint="@string/zipcode"
+        android:maxLength="5"
+        android:imeOptions="actionNext"
+        android:nextFocusDown="@+id/buttonSave"
+        android:inputType="number" />
+    <TextView
+        android:id="@+id/textOverallScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/overall"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toBottomOf="@id/editZipcode"
+        app:layout_constraintStart_toStartOf="parent" />
+    <TextView
+        android:id="@+id/textOverallScoreValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/overall"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toBottomOf="@id/textOverallScore"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+    <LinearLayout
+        android:id="@+id/navBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="@color/navbar_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/buttonList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="25dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/list"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/buttonSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginEnd="50dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/save" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
