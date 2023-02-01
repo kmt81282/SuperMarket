@@ -42,6 +42,7 @@ public class RatingsActivity extends AppCompatActivity {
         ImageButton saveButton = findViewById(R.id.buttonSave);
         Intent intent = getIntent();
         String sentFromMain = intent.getStringExtra("namekey");
+        float overAllScore;
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,6 +72,10 @@ public class RatingsActivity extends AppCompatActivity {
                 if (wasSuccessful) {
                     Intent intent = new Intent(RatingsActivity.this, MainActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    String getName = currentRating.getSuperMarketName();
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    intent.putExtra("namekey", getName);
+                    startActivity(intent);
                     startActivity(intent);
                 }
             }
@@ -95,42 +100,6 @@ public class RatingsActivity extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(RatingsActivity.this);
 
     }
-
-
-
-
-
-
-
-
-/*
-    public int initCalculation() {
-        ImageButton calculate = findViewById(R.id.buttonCalculate);
-        calculate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-              //  Intent intent = new Intent(RatingsActivity.this, ViewStarCalculationDialog.class);
-              //  intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                RatingBar liquor = findViewById(R.id.ratingBarLiquor);
-                RatingBar produce = findViewById(R.id.ratingBarProduce);
-                RatingBar meat = findViewById(R.id.ratingBarMeat);
-                RatingBar cheese = findViewById(R.id.ratingBarCheese);
-                RatingBar checkout = findViewById(R.id.ratingBarCheckout);
-                float overAllScore = (liquor.getRating() + produce.getRating() + meat.getRating() + cheese.getRating() + checkout.getRating()) / 5;
-                FragmentManager fm = getSupportFragmentManager();
-                ViewStarCalculationDialog viewStarCalculationDialog = new ViewStarCalculationDialog();
-                viewStarCalculationDialog.show(fm,"ratings");
-
-            }
-        });
-
-    }
-
-
- */
-
-
-
 }
 
 

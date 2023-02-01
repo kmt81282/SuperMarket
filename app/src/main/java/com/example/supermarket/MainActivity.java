@@ -172,16 +172,13 @@ public class MainActivity extends AppCompatActivity {
                 if (wasSuccessful) {
                             Intent intent = new Intent(MainActivity.this, RatingsActivity.class);
                             String getName = currentRating.getSuperMarketName();
-                            //intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                             intent.putExtra("namekey", getName);
                             startActivity(intent);
                 }
             }
         });
     }
-
-
-
 
 }
 

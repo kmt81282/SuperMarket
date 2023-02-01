@@ -21,6 +21,7 @@
     <string name="welcome_back">"Welcome Back the information you enterd for %1$s has been saved. You can change a current store or enter a new store!"</string>
     <string name="current_calculation">Current Calculation</string>
     <string name="continue_rating">Continue Rating</string>
+    <string name="final_save">Super!Market %1$s has been saved with an over all rating of %2$f!! </string>
 
 
 </resources>
