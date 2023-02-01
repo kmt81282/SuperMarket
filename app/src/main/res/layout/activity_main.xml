@@ -11,7 +11,7 @@
         android:id="@+id/textTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="184dp"
+        android:layout_marginTop="60dp"
         android:text="@string/title"
         android:textColor="#E91E63"
         android:textSize="24sp"
@@ -22,14 +22,28 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/textMessageSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:layout_marginTop="50dp"
+        android:textAlignment="center"
+        android:textColor="@color/purple_500"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/textTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
         android:id="@+id/textSuperMarketName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="50dp"
         android:layout_marginStart="16dp"
         android:text="@string/market_label_name"
         android:ems="10"
-        app:layout_constraintTop_toBottomOf="@+id/textTitle"
+        app:layout_constraintTop_toBottomOf="@+id/textMessageSave"
         app:layout_constraintStart_toStartOf="parent"
         />
     <EditText
@@ -109,28 +123,6 @@
         android:imeOptions="actionNext"
         android:nextFocusDown="@+id/buttonSave"
         android:inputType="number" />
-    <TextView
-        android:id="@+id/textOverallScore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/overall"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintTop_toBottomOf="@id/editZipcode"
-        app:layout_constraintStart_toStartOf="parent" />
-    <TextView
-        android:id="@+id/textOverallScoreValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/overall"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintTop_toBottomOf="@id/textOverallScore"
-        app:layout_constraintStart_toStartOf="parent" />
-
-
 
     <LinearLayout
         android:id="@+id/navBar"

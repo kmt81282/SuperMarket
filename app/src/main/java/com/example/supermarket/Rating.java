@@ -8,15 +8,21 @@ public class Rating {
     private String city;
     private String state;
     private String zipCode;
-    private String liquorRating;
-    private String produceRating;
-    private String meatRating;
-    private String cheeseRating;
-    private String checkoutRating;
+    private float liquorRating;
+    private float produceRating;
+    private float meatRating;
+    private float cheeseRating;
+    private float checkoutRating;
 
 
     public Rating() {
         superMarketID = -1;
+        liquorRating = (float) 0;
+        produceRating = (float) 0;
+        meatRating = (float) 0;
+        cheeseRating = (float) 0;
+        checkoutRating = (float) 0;
+
     }
 
     public int getSuperMarketID() {
@@ -67,43 +73,45 @@ public class Rating {
         this.zipCode = zipCode;
     }
 
-    public String getLiquorRating() {
+    public float getLiquorRating() {
         return liquorRating;
     }
 
-    public void setLiquorRating(String liquorRating) {
+    public void setLiquorRating(float liquorRating) {
         this.liquorRating = liquorRating;
     }
 
-    public String getProduceRating() {
+    public float getProduceRating() {
         return produceRating;
     }
 
-    public void setProduceRating(String produceRating) {
+    public void setProduceRating(float produceRating) {
         this.produceRating = produceRating;
     }
 
-    public String getMeatRating() {
+    public float getMeatRating() {
         return meatRating;
     }
 
-    public void setMeatRating(String meatRating) {
+    public void setMeatRating(float meatRating) {
         this.meatRating = meatRating;
     }
 
-    public String getCheeseRating() {
+    public float getCheeseRating() {
         return cheeseRating;
     }
 
-    public void setCheeseRating(String cheeseRating) {
+    public void setCheeseRating(float cheeseRating) {
         this.cheeseRating = cheeseRating;
     }
 
-    public String getCheckoutRating() {
+    public float getCheckoutRating() {
         return checkoutRating;
     }
 
-    public void setCheckoutRating(String checkoutRating) {
+    public void setCheckoutRating(float checkoutRating) {
         this.checkoutRating = checkoutRating;
     }
 }
+
+
