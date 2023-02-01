@@ -13,6 +13,20 @@
         android:theme="@style/Theme.SuperMarket"
         tools:targetApi="31">
         <activity
+            android:name=".SaveConfirmation"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".TheNet"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".RatingSavedActivity"
             android:exported="false">
             <meta-data

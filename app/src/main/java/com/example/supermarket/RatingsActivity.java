@@ -22,12 +22,13 @@ public class RatingsActivity extends AppCompatActivity {
 
     private Rating currentRating;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ratings);
         initSaveRatingButton();
+        initListButton();
+        initCatButton();
         TextView receivedFromMain = findViewById(R.id.textName);
         Intent intent = getIntent();
         String sentFromMain = intent.getStringExtra("namekey");
@@ -42,7 +43,6 @@ public class RatingsActivity extends AppCompatActivity {
         ImageButton saveButton = findViewById(R.id.buttonSave);
         Intent intent = getIntent();
         String sentFromMain = intent.getStringExtra("namekey");
-        float overAllScore;
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,6 +57,7 @@ public class RatingsActivity extends AppCompatActivity {
                 currentRating.setCheeseRating(cheese.getRating());
                 RatingBar checkout = findViewById(R.id.ratingBarCheckout);
                 currentRating.setCheckoutRating(checkout.getRating());
+                final float overAllScore = (liquor.getRating() + produce.getRating()+meat.getRating()+cheese.getRating()+checkout.getRating())/5;
 
                 boolean wasSuccessful = true;
                 RatingDataSource ds = new RatingDataSource(RatingsActivity.this);
@@ -70,37 +71,61 @@ public class RatingsActivity extends AppCompatActivity {
                     wasSuccessful = false;
                 }
                 if (wasSuccessful) {
-                    Intent intent = new Intent(RatingsActivity.this, MainActivity.class);
+                    Intent intent = new Intent(RatingsActivity.this, SaveConfirmation.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    String getName = currentRating.getSuperMarketName();
+                    String getName = sentFromMain;
+                    String overAllText = String.valueOf(overAllScore);
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     intent.putExtra("namekey", getName);
-                    startActivity(intent);
+                    intent.putExtra("overallkey", overAllText);
                     startActivity(intent);
                 }
             }
         });
     }
 
-    private void initListButton(){
+    private void initListButton() {
         ImageButton listButton = findViewById(R.id.buttonList);
+        Intent intent = getIntent();
+        String sentFromMain = intent.getStringExtra("namekey");
         listButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(RatingsActivity.this, MainActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                String returnName = currentRating.getSuperMarketName();
-                intent.putExtra("returnname", returnName);
+                String returnName = sentFromMain;
+                intent.putExtra("namekey", returnName);
                 startActivity(intent);
             }
         });
     }
 
-    public void calcRatingButton() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(RatingsActivity.this);
+    private void initCatButton() {
+        ImageButton catButton = findViewById(R.id.buttonCat);
+        Intent intent = getIntent();
+        String sentFromMain = intent.getStringExtra("namekey");
+        catButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RatingsActivity.this, TheNet.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                String returnName = sentFromMain;
+                intent.putExtra("namekey", returnName);
+                startActivity(intent);
+            }
+        });
+
 
     }
+
+
 }
+
+
+
+
+
+
 
 
 

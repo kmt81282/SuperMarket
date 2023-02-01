@@ -7,7 +7,7 @@ import android.util.Log;
 
 public class RatingDBHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "ratings.dp";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
     /*Everytime the database is accessed it looks at this version if it is
     if the number is higher the onUpgrade method is called. The developer
     only needs to update this version number

@@ -17,11 +17,12 @@
     <string name="main_activity_saved">Market Data is saved pleaase rate the store:</string>
     <string name="saved">Super!Market Ratings Saved!</string>
     <string name="message_window">Message Window</string>
-    <string name="welcome_message">Welcome to the Party Please Enter the following:</string>
-    <string name="welcome_back">"Welcome Back the information you enterd for %1$s has been saved. You can change a current store or enter a new store!"</string>
+    <string name="welcome_message">Welcome to the Party. Please Enter the following:</string>
+    <string name="welcome_back">"Welcome Back the information you entered for %1$s Market has been saved with an overall rating score of %2$s. You can change a current store or enter a new store!"</string>
     <string name="current_calculation">Current Calculation</string>
     <string name="continue_rating">Continue Rating</string>
-    <string name="final_save">Super!Market %1$s has been saved with an over all rating of %2$f!! </string>
-
+    <string name="final_save">Super!Market %1$s has been saved with an over all rating of %2$s!! </string>
+    <string name="careful">Return to the app, be careful with the esc key!!!</string>
+    <string name="save_back_main">Return to Main Screen</string>
 
 </resources>

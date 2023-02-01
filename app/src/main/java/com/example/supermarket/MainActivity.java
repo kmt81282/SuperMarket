@@ -28,11 +28,12 @@ public class MainActivity extends AppCompatActivity {
 
         currentRating = new Rating();
         Intent intent = getIntent();
-        String returnedName = intent.getStringExtra("returnname");
+        String returnedName = intent.getStringExtra("namekey");
+        String returnedRating = intent.getStringExtra("overallkey");
         TextView messageDisplay = findViewById(R.id.textMessageSave);
         Resources res = getResources();
         if (returnedName != null) {
-            messageDisplay.setText(res.getString(R.string.welcome_back, returnedName));
+            messageDisplay.setText(res.getString(R.string.welcome_back, returnedName, returnedRating));
         } else {
             messageDisplay.setText(res.getString(R.string.welcome_message));
         }
@@ -154,12 +155,13 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     ds.open();
 
-                    if (currentRating.getSuperMarketID() == -1) {
+                    String marketName = currentRating.getSuperMarketName();
 
+                    if(currentRating.getSuperMarketID() == -1) {
                         wasSuccessful = ds.insertRating(currentRating);
-                        if (wasSuccessful) {
 
-                            int newID = ds.getLastMarketID();
+                        if (wasSuccessful) {
+                            int newID = ds.getMarketNameToID(marketName);
                             currentRating.setSuperMarketID(newID);
                         }
                     }
